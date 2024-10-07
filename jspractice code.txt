@@ -1,0 +1,764 @@
+
+console.log("hello");
+document.title="intro to js"
+var a=10;
+var b=10;
+console.log(a+b)
+console.log(a+b+8)
+var a=alert("hey next is prompt")
+var a=prompt("Enter your name")
+console.log(a);
+var a=confirm("Do you want to quit this game?")
+console.log(a)
+document.body.style.background="red";
+var a=10;
+var b="strinh";
+var c=false;
+var d=null;
+var  e=undefined;
+var f=Symbol;
+console.log(typeof a,typeof b,typeof c,typeof d,typeof e,typeof f)
+// number string boolean object undefined function
+var a=5;
+let b=5; //error
+const c=6;
+var a=6;
+let b=6; //error
+const d; //error
+var e;
+let v;
+var f=undefined;
+let g=undefined
+let b=prompt("Enter a number");
+if(b!=0){
+    console.log("number is "+b)
+}
+else{
+    console.log("number is zero");
+}
+let c=prompt("Enter a num")
+c!=0?console.log("number is "+c):console.log("number is zero")
+var a=prompt("Enter a number for print the table")
+for(i=1; i<=10;i++){
+    console.log(a +"*"+ i +"=" +(a*i));
+}
+var a=prompt("Enter a number for print the table")
+var i=1;
+while(i<=10){
+    console.log(a +"*"+ i +"=" +(a*i));
+    i++;
+}
+switch
+if eles if else
+logicaland or not
+var a=prompt("Enter a day in small letters");
+switch(a!=""){
+    case (a=="monday"):
+        console.log("Its monday today");
+        break;
+    case (a=="tuesday"):
+        console.log("ItS tuesday today") ;
+        break;
+    case (a=="wednesday"):
+            console.log("Its wednesday today");
+            break;
+    case (a=="thursday"):
+            console.log("ItS thursday today") ;
+            break;
+    case (a=="friday"):
+                console.log("Its friday today");
+                break;
+    case (a=="saturday"):
+                console.log("IYS saturday today") ; 
+                break; 
+    default:
+        console.log("Today is Sunday");                  
+}
+let b=prompt("Enter  a number");
+let c=prompt("Enter a number")
+if(b!=0){
+    console.log("b is not zero")
+    if(b%c==0){
+        console.log("b is divisible by c");
+        console.log("remainer is" +b%c);
+    }else{
+        console.log("b is not divisible by c");
+        console.log("remainer is" +b%c);
+    }
+}else{
+   console.log("enter valid number")
+}
+let d=prompt("Enter a number");
+let b=prompt("Enter a number");
+if(d==2 && b==3){
+   console.log("d=2, b=3")
+}
+if(d==2 || b==3){
+    console.log("d=2 or b=3")
+ }
+ if(b!=3){
+    console.log("b!=3")
+ }
+console.log("Hello");
+
+// <------------------------------------------------------------------------------------------------------------------------------------------------
+Functions
+function displayname(){
+    console.log("Hello World");
+}
+displayname();
+(function(){
+    console.log("Hello world");
+})(); // not running
+
+function executeCallback(callback){
+    callback();
+}
+executeCallback(function(){
+    console.log("Hello World");
+});
+executeCallback(function(){
+    console.log("Hello World");
+}); /////// pass as a callback 
+console.log("hello")
+document.addEventListener("DOMContentLoaded", function(){
+    console.log("Hello World");
+}) // auto run when dom is loaded
+console.log("Hello World");
+// set timeout or set Interval function
+const greet=function(name){
+    console.log('hello,${name1}!')
+}
+greet.function ("vish");//not works
+setTimeout(function(){
+    console.log("Hello World");
+},5000)  /// works loads 8 sec past
+const person={
+    name:"John",
+    sayHello:function(){
+        console.log('Hello, my name is ${this.name}');
+    }
+}
+person.sayHello();// not works
+function Person(name){
+    this.name=name;
+}
+const person=new Person('John') not works
+function* generator(){
+    yield 1;
+    yield 2;
+    yield 3;
+}
+const gen=generator();
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+let object={
+    name:"John",
+    class:12,
+    comapnay:"info"
+}
+for (const key in object) {{
+        const element = object[key];
+        console.log(key,element);// prints the values
+    }
+}
+function functionname(name){
+    console.log("Hello, " + name+ "You are too good ");
+}
+functionname("harry")// works
+function sum (a,b){
+    console.log("The sum of" +a+ "and" +b+ "is" +(a+b))
+}
+sum(58,52)
+sum(58) /// not works returns undefined
+function sum(a,b,c){
+    return a+b+c;
+}
+function sum(a,b,c=3){  
+    return a+b+c;
+}
+var result=sum(53,54,25)
+console.log("The result is" ,result) // works
+var result=sum(53,54)
+console.log(result) // works
+var result=sum(53)
+console.log(result) // works
+// arrow functions----------
+const func1=(param)=>{
+    console.log("Hello, " + param);
+}
+func1("hello")
+func1(1545)
+// functions are done 
+// =========================================================================================================================================
+let a=prompt("Enter the first number ")
+let b=prompt("Enter the second number")
+let c=prompt("Enter the operation")
+console.log(a)
+console.log(b)
+console.log(c)
+let random=Math.random();
+let obj={
+    "+":"-",
+    "*":"+",
+    "-":"/",
+    "/":"**"
+}
+c=obj[c]
+console.log(random);
+if(random>1.6){
+    console.log(` The result of ${a}, ${b}, ${c}`)
+    console.log(`the result is ${eval(`${a} ${c} ${b}`)}`)
+}
+else{
+    console.log(` The result of ${a}, ${b}, ${c}`)
+    console.log(`the result is ${eval(`${a} ${c} ${b}`)}`)
+// }
+// Strings===========================================================================================================================
+let name="Vishakha hello"
+console.log(name.toUpperCase())
+console.log(name.length);// function of length
+console.log(name[0])  // function to get index
+console.log(name[1])
+console.log(name[2])
+console.log(name[3])
+let b="Harry"
+console.log(b.toUpperCase())
+console.log(b.toLowerCase())
+console.log(b.replace("rr","bb"))
+console.log(b.split(""))
+console.log(name.trim())
+console.log(b.split("r"))
+console.log(b.endsWith("ry"))
+console.log(b.startsWith("H"))
+console.log(name.concat(b))
+console.log(b.startsWith("l"))
+console.log(b.charAt(4))
+console.log(name.charAt(5))
+console.log(b.slice(1,4))
+console.log(name.slice(3,7))
+
+
+
+
+//Arrays in javascript
+
+//Arrays are mutable can be change
+
+arr=[5,5,8,36,45,54]
+console.log(arr.length)
+console.log(arr[0])
+console.log(arr[1])
+console.log(arr[2])
+console.log(arr[3])
+console.log(arr[4])
+
+console.log(arr.toString()) // shows string in
+result=arr.toString()
+
+console.log(typeof(result))
+console.log(arr)
+
+console.log("Array" +arr)// by default make array a string that is we want
+arr.pop();    // delete from last
+console.log(arr)
+arr.delete()   // delete is not a function in array in js
+arr.delete    // delete at last but  not delete at any index
+
+console.log(arr)
+arr.shift()    // delete from starts
+console.log(arr)
+arr.unshift(100) // insert at  first
+console.log(arr)
+
+arr.push(54) // insert at last
+console.log(arr)
+arr3=[56,5,48,52,45,78,9]
+arr4=[16,8,88,62,85,89,99]
+arr.join("arr")   // joins the single array with the keyword arr
+console.log(arr.join("arr3"))
+
+arr.concat(arr3)
+arr.concat(arr3,arr4)
+console.log(arr.concat(arr3))
+console.log(arr.concat(arr3,arr4))
+console.log(arr3)
+console.log(arr4)
+console.log(arr)
+console.log(arr)
+console.log(arr.sort())
+console.log(arr3)
+arr3.sort((a,b)=>a-b)
+console.log(arr3)
+console.log(arr4)
+arr4.sort((a,b)=>b-a)
+console.log(arr4)
+
+arr3=[56,5,48,52,45,78,9]
+arr4=[16,8,88,62,85,89,99]
+
+// sort a array in case sensitive manner
+let arr=['apple','Cherry','Banana','date','app'];
+arr.sort((a,b)=> a.toLowerCase().localeCompare(b.toLowerCase()))
+
+console.log(arr)  // sorts the string array in a case sensitive manner
+ starts with index 2 and remains only 6 items
+
+ console.log(arr1)
+ console.log(arr1.splice(2,9))
+
+console.log(arr1.slice(2,9)) // from  index 2 to 9
+
+for(let i=0; i<arr1.length;i++){
+    const element=arr1[i];
+    console.log(i,element)
+}
+arr1.forEach(element => {
+    console.log(element)
+});              // uses only for array objects
+// both loops works  same but the first one is more efficient than the second one
+arr1.forEach((value,index)=>{
+    console.log(value,index)
+    console.log(index,value)
+}
+)
+
+array loops 
+
+arr1=[5,5,8,36,45,54,6,54,45,8,9,36]
+
+for(const value of arr1){
+    console.log(value)
+}
+
+// map function-- creates a new array by performing some operation on each array element
+
+const arr3=[2,5,4,8]
+
+const a=arr3.map(value=>{
+    return value*value
+})
+console.log(arr3)    // works 
+console.log(a)   // works an array
+// filter function -- creates a new array with all elements that pass the test implemented by the provided function
+
+
+
+console.log(a)
+const graterThanFive=(e)=>{
+      if(e>5){
+        return true
+      }
+        return false
+      
+}
+
+console.log(a.filter(graterThanFive))
+
+
+
+// factorial program
+
+let a=prompt("Enter a number for factorial")
+
+let fact=1
+
+for(i=a;i>1;i--){
+    fact*=i;
+    
+}
+console.log(fact)
+
+/// Find the prime number
+let num=869
+
+function checkprime(num){
+    if(num%2==0){
+        console.log(num+"is not a prime number")
+    }
+    else{
+        let isprime=true;
+         for(i=2;i*i<=num;i++) {
+            if(num%i==0){
+                console.log(num+"is not a prime number")
+                isprime=false;
+                break;
+            }
+         }
+         if(isprime)
+{
+    console.log(num+"is  a prime number")
+}
+    
+}
+}
+checkprime(num)
+
+/// find out how many numbers are prime in between the range 100-200
+
+function checkprime(i){
+    let isprime=true
+       for(j=2;j*j<=i;j++){
+           if(i%j==0){
+               isprime=false
+               break;
+       }                              
+}
+if(isprime){
+console.log(i+"is prime")
+}
+}
+for(i=100;i<=200;i++){
+    checkprime(i)
+}
+
+
+
+// convert date to anumber
+
+// const date=new Date()
+// const timestamp=date.getTime();
+// console.log(timestamp);
+
+// Dom methods--------------------------------------------------------------------------------------------------------------------------------
+
+// document.getElementById("demo").innerHTML="<b> HEllo WOrld<b>"//works
+// document.getElementById("demoo").innerText="HEllo WOrld"// works
+// document.getElementById("demoo").style.backgroundColor = "red"// works
+
+// document.title="myPage"
+// console.log(document.title)
+// console.log(document.body)
+// document.body.style.backgroundColor="red"
+
+
+// document.getElementById("container")
+
+// let a=document.getElementsByClassName("containeritem")
+// console.log(a)//works
+
+// let a=document.getElementsByClassName("containeritem[2]")
+// console.log(a)
+
+// let a=document.body.childNodes
+// console.log(a)
+// let b=document.body.children
+// console.log(b)
+// let c=document.body.firstElementChild
+// console.log(c)
+// let d=document.body.lastElementChild
+// console.log(d)
+// let e=document.body.innerText
+// console.log(e)
+// let f=document.body.classList
+// console.log(f)
+
+// let a=document.body.childNodes[3]
+//  console.log(a)
+// let a=document.body.childNodes
+//  console.log(a)
+// for(let i in a){
+//  console.log(i)
+// }
+
+// let a=document.getElementsByClassName("containeritem")
+// console.log(a)
+// for(let i of a){
+//     console.log(i)
+// } // works
+
+// let b=document.getElementsByTagName("div")
+
+// console.log(b)
+
+
+// let b=document.querySelector("div")
+
+// console.log(b)
+
+// let b=document.querySelectorAll(".containeritem")
+
+// console.log(b)
+// let b=document.querySelector(".containeritem")
+
+// console.log(b)
+// let b=document.querySelector(".containeritem")
+
+// console.log(b)
+
+// let c=document.querySelector(".containeritem")
+
+// document.getElementById("images").src="pre.jpg"
+
+// let d=document.getElementsByClassName("containeritem")
+
+// console.log(d)
+// console.log(d[2])
+
+// console.log(d[2].parentElement)
+// console.log(d[2].previousElementSibling)
+// console.log(d[2].previousSibling)
+// console.log(d[2].parentElement)
+// console.log(d[2].nextElementSibling)
+// console.log(d[2].nextSibling)
+
+
+// let a=document.getElementsByClassName("containeritem")
+
+// console.log(a)
+// // a.forEach(element => {
+// //     console.log(element)
+// // }); not a function
+
+// a[3].style.backgroundColor="red"// works
+
+// document.getElementsByClassName("containeritem").forEach(e => {
+//     e.style.backgroundColor="green"
+    
+// });// not works
+
+
+
+// let e=document.getElementsByTagName("div")
+
+
+
+
+// e=document.getElementsByTagName("div")
+// HTMLCollection(6) [div#container.container, div.containeritem, div.containeritem, div#redbox.containeritem, div.containeritem, div.containeritem, container: div#container.container, redbox: div#redbox.containeritem]
+// e[2].matches(#tredbox")
+// VM1968:1 Uncaught SyntaxError: Unexpected identifier '#tredbox'Understand this error
+// e[2].matches(#redbox")
+// VM1974:1 Uncaught SyntaxError: Unexpected identifier '#redbox'Understand this error
+// e[2].matches("#redbox")
+// false
+// e[1].matches("#redbox")
+// false
+// e[3].matches("#redbox")
+// true
+
+// e[4].closest("#redbox")
+// null
+// e[4].closest("container")
+// null
+// e[4].closest("containeritem")
+// null
+// e[1].closes
+// undefined
+// e[1].closest("containeritem")
+// null
+// e[1].closest(".containeritem")
+// <div class=​"containeritem">​HEllo hii​</div>​
+// e[4].closest(".container")
+// <div class=​"container" id=​"container">​…​</div>​
+// e[4].closest(".containeritem")
+// <div class=​"containeritem">​HEllo hii​</div>​
+// document.querySelector(".container").contains(e[2])
+// true
+// document.querySelector("container")
+// null
+// document.querySelector(".container")
+// <div class=​"container" id=​"container">​…​</div>​
+// document.querySelectorAll(".containeritem")
+// NodeList(5) [div.containeritem, div.containeritem, div#redbox.containeritem, div.containeritem, div.containeritem]
+// document.querySelector(".container").innerText
+// 'HEllo hii\nHEllo hii\nHEllo hii\nHEllo hii\nHEllo hii'
+// document.querySelector(".container").innerHTML
+// '\n        <div class="containeritem">HEllo hii</div>\n        <div class="containeritem">HEllo hii</div>\n        <div class="containeritem" id="redbox">HEllo hii</div>\n        <div class="containeritem">HEllo hii</div>\n        <div class="containeritem">HEllo hii</div>\n    '
+// document.querySelector(".container").outer
+// undefined
+// document.querySelector(".container").outerHTML
+// '<div class="container" id="container">\n        <div class="containeritem">HEllo hii</div>\n        <div class="containeritem">HEllo hii</div>\n        <div class="containeritem" id="redbox">HEllo hii</div>\n        <div class="containeritem">HEllo hii</div>\n        <div class="containeritem">HEllo hii</div>\n    </div>'
+// document.querySelector(".container").outerText
+// 'HEllo hii\nHEllo hii\nHEllo hii\nHEllo hii\nHEllo hii'
+// document.querySelector(".containeritem").outer
+// undefined
+// document.querySelector(".containeritem").outerText
+// 'HEllo hii'
+// document.querySelector(".containeritem").outerHTML
+// '<div class="containeritem">HEllo hii</div>'
+// document.querySelector(".containeritem").inner
+// undefined
+// document.querySelector(".containeritem").outerText
+// 'HEllo hii'
+// document.querySelector(".containeritem").outerHTML
+// '<div class="containeritem">HEllo hii</div>'
+
+// document.querySelector(".container").tagName
+// 'DIV'
+// document.querySelector(".container").nodeName
+// 'DIV'
+// document.querySelector(".container").nodeType
+// 1
+// document.querySelector(".container").nodeValue
+// null
+// document.querySelector(".containeritem").nodeType
+// 1
+// document.querySelector(".container").nodeValue
+// null
+// document.querySelector(".container").tex
+// undefined
+// document.querySelector(".container").textContent
+// '\n        HEllo hii\n        HEllo hii\n        HEllo hii\n        HEllo hii\n        HEllo hii\n    '
+// document.querySelector(".containeritem").text
+// undefined
+// document.querySelector(".containeritem").textContent
+// 'HEllo hii'
+
+// undefined
+// document.querySelector(".containeritem").hasAttribute("style")
+// false
+// document.querySelector(".container").hasAttribute("id")
+// true
+// document.querySelector(".container").hasAttribute("id")
+// true
+// document.querySelector(".containeritem").hasAttribute("id")
+// false
+// document.querySelector(".box2").hasAttribute("id")
+// true
+// document.querySelector(".box2").hasAttributeNS("style, id")
+// VM4124:1 Uncaught TypeError: Failed to execute 'hasAttributeNS' on 'Element': 2 arguments required, but only 1 present.
+//     at <anonymous>:1:33
+// (anonymous) @ VM4124:1Understand this error
+// document.querySelector("#box2").hasAttributeNS("style", "id")
+// false
+// document.querySelector(".container").hasChildNodes("text")
+// true
+// document.querySelector(".container").hasOwnProperty("class")
+// false
+
+// document.querySelector(".container").hasOwnProperty()
+// false
+// document.querySelector(".box2").attributes
+// NamedNodeMap {0: class, 1: style, 2: id, class: class, style: style, id: id, length: 3}
+// document.querySelector(".container").removeAttribute("id")
+
+
+// document.querySelector(".box2").removeAttribute("style")
+// undefined
+
+// document.designMode="on"
+// 'on' //works on any websites
+// document.querySelector(".box2").dataset
+// DOMStringMap {createdBy: 'vishakha', concepetedBy: 'vishakha ahirwar'}
+// document.querySelector(".box2").onloadeddata
+// null
+// document.querySelector(".box2").data
+// undefined
+// let div= document.createElement("div")
+// undefined
+// div.set
+// undefined
+// div.setAttribute("class","created")
+// undefined
+// document.querySelectorAll(".container")
+// NodeList [div#container.container]0: div#container.containerlength: 1[[Prototype]]: NodeList
+// document.querySelector(".container").append(div)
+// undefined
+// div.inn
+// undefined
+// // div.innerHTML="Hii am inserted"
+// // 'Hii am inserted'
+// document.querySelector(".container").prepend(div)
+// undefined
+//befor(e[])
+// after(e[])
+// replace with(e[])
+
+// Insert Adjacent HTML/TEXT/Element
+// This method to insert HTMLAllCollection;l 
+// the first parameter is a code WebTransportDatagramDuplexStream, specifying where to insert. Must be one of the following
+
+// beforebegin- insert immediately before Element
+// afterbegin-Insert into element at the begining
+// beforeend-Insert into element at the end
+// afterend-Insert HTML immediately after element
+
+
+
+// let cont=document.querySelector(".container")
+// cont.insertAdjacentElement("afterbegin", "<b>I am under 21</b>")
+
+// let cont=document.querySelector(".container")
+// undefined
+// cont.insertAdjacentHTML("afterbegin","<b> Hii I am vishakha<b>")
+// undefined
+// cont.insertAdjacentHTML("afterend","<b> Hii I am vishakha<b>")
+// undefined
+// cont.insertAdjacentHTML("beforebegin","<b> Hii I am vishakha<b>")
+// undefined
+// cont.insertAdjacentHTML("beforeend","<b> Hii I am vishakha<b>")
+// undefined
+
+// classlist
+// classname
+// classlist.add
+// document.querySelector(".box2").classList
+// DOMTokenList(2) ['containeritem', 'box2', value: 'containeritem box2 ']
+// document.querySelector(".box2").className
+// 'containeritem box2 '
+// document.querySelector(".box2").classList.add("colone")
+// undefined
+// document.querySelector(".box2").className
+// 'containeritem box2 colone'
+// document.querySelector(".box2").classList.remove("box2")
+// undefined
+// document.querySelector(".box2").className
+// VM6074:1 Uncaught TypeError: Cannot read properties of null (reading 'className')
+//     at <anonymous>:1:32
+// (anonymous) @ VM6074:1Understand this error
+// document.querySelector(".colone").className
+// 'containeritem colone'
+// document.querySelector(".colone").classList.add("box2")
+// undefined
+// document.querySelector(".colone").classList.add("redbox")
+// undefined
+// .className
+// VM6074:1 Uncaught TypeError: Cannot read properties of null (reading 'className')
+//     at <anonymous>:1:32
+// (anonymous) @ VM6074:1Understand this error
+// document.querySelector(".colone").className
+// 'containeritem colone'
+// document.querySelector(".colone").classList.add("box2")
+// undefined
+// document.querySelector(".colone").className
+// VM6305:1 Uncaught SyntaxError: Unexpected token '.'Understand this error
+// .className
+// VM6074:1 Uncaught TypeError: Cannot read properties of null (reading 'className')
+//     at <anonymous>:1:32
+// (anonymous) @ VM6074:1Understand this error
+// document.querySelector(".colone").className
+// 'containeritem colone'
+// document.querySelector(".colone").classList.add("box2")
+// undefined
+// document.querySelector(".redbox").className
+// VM6383:1 Uncaught SyntaxError: Unexpected token '.'Understand this error
+// document.querySelector(".colone").className
+// 'containeritem colone box2 redbox'
+// document.querySelector(".box2").classList.toggle("red")
+// true
+// document.querySelector(".box2").classList
+// DOMTokenList(5) ['containeritem', 'colone', 'box2', 'redbox', 'red', value: 'containeritem colone box2 redbox red']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
