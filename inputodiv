@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+      <textarea class="message" id="myTextarea" cols="50" rows="10"></textarea>
+      <button class="submit" id="myButton">Submit(duble click)</button>
+      <div class="outputbox" id="outputDiv">
+        <h5>The text will added here on double click of submit</h5>
+      </div>
+      <script>
+    const textarea = document.getElementById('myTextarea');
+const button = document.getElementById('myButton');
+const outputDiv = document.getElementById('outputDiv');
+button.addEventListener("dblclick", () => {
+//  type 1 
+
+// const textareaValue = textarea.value; 
+  // outputDiv.innerText=textareaValue;
+
+  // type 2
+  
+// outputDiv.innerText=textarea.value;
+
+})
+</script>
+    </body>
+  </html>
