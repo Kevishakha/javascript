@@ -1,0 +1,64 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+        body {
+              font-family: Arial, sans-serif;
+              background-color: #f0f0f0;
+          }
+          .tasklist {
+             
+              display: flex;
+              flex-direction: column;
+              padding: 0;
+              margin: 0;
+          }
+          .classitem {
+              display: inline-block;  
+          }
+      </style>
+  </head>
+  <body>
+     
+       <input type="text" id="newtask">
+       <button id="addButton">Add Task</button>
+        <ul class="tasklist"id="taskList">  
+        </ul>
+  
+        
+   <script src="jscript.js">
+       /*
+//  concepts==create(ul) (add task) btn and (input)  when btn (clicked)=== li will created in ul; ul display=block;
+// one li will created in ullist with the innertext value of the inputfield
+// add event listener
+// 1.--- create and add elemennt
+// 2.--- input field value in list item
+// 3.--
+
+// */
+
+ let addTask=document.getElementById("newtask")
+ let addButton=document.getElementById("addButton")
+ let tasklist=document.querySelector(".tasklist")
+
+ console.log(addTask)
+ console.log(addButton)
+console.log(tasklist)
+
+ addButton.addEventListener("click",()=>{
+     let div=document.createElement("input")
+     div.setAttribute("type","checkbox")
+     div.setAttribute("class","checkbox")
+     tasklist.append(div)
+     let div2= document.createElement("li")  
+     div2.setAttribute("class","classitem")
+     tasklist.append(div2)
+     div2.innerText=addTask.value
+ })
+   </script>
+   
+  </body>
+  </html>
