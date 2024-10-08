@@ -646,9 +646,8 @@ for(i=100;i<=200;i++){
 // null
 // document.querySelector(".box2").data
 // undefined
+<--------------------------------------------------------------------------------------------createElement---------------
 // let div= document.createElement("div")
-// undefined
-// div.set
 // undefined
 // div.setAttribute("class","created")
 // undefined
@@ -690,7 +689,7 @@ for(i=100;i<=200;i++){
 // undefined
 // cont.insertAdjacentHTML("beforeend","<b> Hii I am vishakha<b>")
 // undefined
-
+<--------------------------------------------------------------------------------------------------------
 // classlist
 // classname
 // classlist.add
@@ -742,10 +741,117 @@ for(i=100;i<=200;i++){
 // DOMTokenList(5) ['containeritem', 'colone', 'box2', 'redbox', 'red', value: 'containeritem colone box2 redbox red']
 
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+      <textarea class="message" id="myTextarea" cols="50" rows="10"></textarea>
+      <button class="submit" id="myButton">Submit(duble click)</button>
+      <div class="outputbox" id="outputDiv">
+        <h5>The text will added here on double click of submit</h5>
+      </div>
+      <script>
+    const textarea = document.getElementById('myTextarea');
+const button = document.getElementById('myButton');
+const outputDiv = document.getElementById('outputDiv');
+button.addEventListener("dblclick", () => {
+//  type 1 
+
+// const textareaValue = textarea.value; 
+  // outputDiv.innerText=textareaValue;
+
+  // type 2
+  
+// outputDiv.innerText=textarea.value;
+
+})
+</script>
+    </body>
+  </html>
 
 
+// document.querySelector(".container")
+// let boxes=document.querySelector(".container")
+// undefined
+// Math.random()
+// 0.23274556121331202
+// a+r(b-a)
+// VM388:1 Uncaught ReferenceError: a is not defined
+//     at <anonymous>:1:1
+// (anonymous) @ VM388:1Understand this error
+// 0+Math.random()
+// 0.2090514818563769
+// 0+Math.random()*255
+// 94.5874524801782
+// 0+Math.random()*255
+// 97.71023802342073
+// math.ceil(0+Math.random()*255)
+// VM483:1 Uncaught ReferenceError: math is not defined
+//     at <anonymous>:1:1
+// (anonymous) @ VM483:1Understand this error
+// Math.ceil(0+Math.random()*255)
+// 176
+// Math.ceil(0+Math.random()*255)
+// 236
+// Math.ceil()
+// NaN
+// Math.ceil(Math.random()*255)  math.ceil return an integer value
+// 173
+//  let arry=document.querySelector(".container").children
+// console.log(array) 
+// let a=document.querySelector(".box")
+// console.log(a)
+// a.style.backgroundColor=getRandomColor()// workx
+// function getRandomColor(){
+//     let val1=Math.ceil(0+Math.random()*255)
+//     let val2=Math.ceil(0+Math.random()*255)
+//     let val3=Math.ceil(0+Math.random()*255)
+//     return `rgb(${val1},${val2},${val3})`
+// }// works
+// Array.from(arry).forEach(a=>{
+///     a.style.backgroundColor=getRandomColor()
+ // })//works
+// for(i of arry){
+//    i.style.backgroundColor=getRandomColor()
+//    i.style.transitionDelay="5s"
+    
 
+// }// works
+// for(i of arry){
+//     i.style.backgroundColor=getRandomColor()
+//     i.style.transitionDelay="5s"
+// }
+// function getRandomColor(){
+//     let val1=Math.ceil(0+Math.random()*255)
+//     let val2=Math.ceil(0+Math.random()*255)
+//     let val3=Math.ceil(0+Math.random()*255)
+//     return `rgb(${val1},${val2},${val3})`
+// }
+// setTimeout(
+//     function(){
+//         let arry=document.querySelector(".container").children
+//         for(i of arry){
+//             i.style.backgroundColor=getRandomColor()
+//             i.sty
+//             i.style.transitionDelay="2s"
+//         }
+// },2000)
+//===========================================================================================================================================================================
 
+// Events, event bubbling, setInterval & setTimeout
+// button.addEventListener("click", ()=>{
+//     alert("Hey I am clicked")
+// })
+
+// Question : How to get the value of the input field when the button is clicked?
+
+// to do list using crud operation like create li tags when add task clicks
+
+// 
 
 
 
