@@ -5,6 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-tac-toe Game</title>
     <link href="style.css"  rel="stylesheet">
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    height: 10vh;
+    width: 100vw;
+    background-color: aqua;
+    text-align: center;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    font-size: 2.8rem;
+    color: black;
+}
+.gameContainer{
+    display: flex;
+    background-color: beige;
+    justify-content: center;
+    
+}
+.box{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+}
+.boxCell{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxCell:hover{
+    background-color: lightblue;
+}
+
+.image img{
+   width: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.div2{
+    margin-top: 15px;
+}
+#reset{
+   padding: 2px 15px 2px 15px;
+   margin-left: 20px;
+}
+
+@media screen and (max-width:900px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .infoContainer{
+        margin-top: 50px;
+        font-size: 1.2rem;
+    }
+    .info{
+        font-size: 1rem;
+    }
+}
+
+
+</style>
+
 </head>
 <body>
    <nav>
